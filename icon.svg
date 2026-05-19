@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- خلفية متدرجة بلون الكلية -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(16,185,129,0.4)" />
+      <stop offset="100%" stop-color="rgba(16,185,129,0)" />
+    </radialGradient>
+  </defs>
+
+  <!-- المربع الخلفي بزوايا مدورة (للأيقونات الـmaskable) -->
+  <rect x="0" y="0" width="512" height="512" rx="100" fill="url(#bg)"/>
+  <!-- توهج خفيف -->
+  <circle cx="256" cy="256" r="220" fill="url(#glow)"/>
+
+  <!-- المسجد (في المركز مع padding للـmaskable safe zone) -->
+  <g transform="translate(256, 256)">
+    <!-- القبة الرئيسية -->
+    <ellipse cx="0" cy="-30" rx="80" ry="70" fill="#ffffff"/>
+    <!-- الهلال على القبة -->
+    <path d="M -5 -120 Q 5 -130 15 -120 Q 5 -115 -5 -120 Z" fill="#fbbf24"/>
+    <line x1="0" y1="-115" x2="0" y2="-100" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- المئذنة اليسرى -->
+    <rect x="-110" y="-50" width="18" height="120" fill="#ffffff" rx="3"/>
+    <path d="M -119 -50 L -101 -75 L -83 -50 Z" fill="#ffffff"/>
+    <circle cx="-101" cy="-80" r="4" fill="#fbbf24"/>
+    
+    <!-- المئذنة اليمنى -->
+    <rect x="92" y="-50" width="18" height="120" fill="#ffffff" rx="3"/>
+    <path d="M 83 -50 L 101 -75 L 119 -50 Z" fill="#ffffff"/>
+    <circle cx="101" cy="-80" r="4" fill="#fbbf24"/>
+    
+    <!-- جسم المسجد -->
+    <rect x="-90" y="40" width="180" height="70" fill="#ffffff" rx="5"/>
+    
+    <!-- باب المسجد المقوس -->
+    <path d="M -20 110 L -20 75 Q -20 55 0 55 Q 20 55 20 75 L 20 110 Z" fill="#065f46"/>
+    
+    <!-- نافذتان -->
+    <path d="M -65 90 L -65 70 Q -65 60 -55 60 Q -45 60 -45 70 L -45 90 Z" fill="#065f46"/>
+    <path d="M 45 90 L 45 70 Q 45 60 55 60 Q 65 60 65 70 L 65 90 Z" fill="#065f46"/>
+    
+    <!-- زخرفة على القبة -->
+    <circle cx="0" cy="-30" r="6" fill="#fbbf24" opacity="0.8"/>
+  </g>
+
+  <!-- نص "ص" للصماد -->
+  <g transform="translate(256, 440)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="42" font-weight="bold"
+          fill="#ffffff" text-anchor="middle" opacity="0.9">الصماد</text>
+  </g>
+</svg>
