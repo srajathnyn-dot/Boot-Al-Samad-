@@ -1,1 +1,20 @@
+name: Unzip Project Files
 
+on:
+  workflow_dispatch:
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Unzip bot file
+        run: |
+          unzip -o 'بوت الصماد.zip' -d .
+      - name: Commit unzipped files
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add .
+          git commit -m "Unzip bot files" || echo "No changes to commit"
+          git push
